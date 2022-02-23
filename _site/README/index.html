@@ -1,0 +1,58 @@
+<h1>11ty Blog Posts</h1>
+<h2>Introduction to JavaScript and Open Web Components</h2>
+<p>Maybe you're also a beginner, or have no experience with JavaScript and are looking for a place to start. Welcome! We will be going through the steps for making sure that you have all you need to begin your web dev journey.</p>
+<p><em>These steps will be most compatible with Mac users</em></p>
+<h3>What is JavaScript?</h3>
+<p>JavaScript first appeared in 1995 as a scripting language for the World Wide Web. It operates alongside HTML and CSS to increase interactivity and functionality on web pages. Nowadays, over 97% of websites use JavaScript to increase capabilities on their client-facing interfaces.</p>
+<p>Now that you have a brief background, let's get started with getting all the tools we need.</p>
+<h3>VS Code</h3>
+<p>VS code is a code editing software that comes in handy when learning JavaScript. It provides support for debugging and version control. It is a great option for beginners who are getting into web dev.</p>
+<p>You can get VS Code <a href="https://code.visualstudio.com/Download">here</a></p>
+<h3>NodeJS</h3>
+<p>NodeJS is an open source platform and allows you to run server-side applications on your personal machine.</p>
+<p>When <a href="https://nodejs.org/en/download/">downloading</a>, make sure that you download the LTS/&quot;recommended for most users&quot; option for a more reliable platform.</p>
+<p><strong>Tip</strong>: to double check that NodeJS has installed successfully, you can simply type <code>node</code> in your terminal window (for macOS users, you can navigate to it by searching 'terminal' in your launchpad)
+<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/y6jj36msd5kkylkrjghr.png" alt="NodeJS"></p>
+<h3>npm</h3>
+<p>Luckily for you, npm (node package manager) is installed as a <em>package deal</em> with NodeJS. Npm is the default package manager for NodeJS and allows you to use third party code in your own. It is one of the largest software registries, giving you a plethora of tools for your own code.</p>
+<p>Similarly to NodeJS, you can ensure you have npm by typing <code>npm</code> in your terminal window. You will see a longer message this time showing some of the capabilities you have with npm!<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6qxrp0uql2cgxmb4l261.png" alt="npm"></p>
+<h3>Git</h3>
+<p>Git is a version control service used for communicating and collaborating between different programmers creating code for one project.</p>
+<p>You can get git <a href="https://git-scm.com/downloads">here</a>.
+After completed, type <code>git</code> in terminal to ensure correct installation.</p>
+<hr>
+<h3>Open Web Components</h3>
+<p>Now that we have all the necessary tools to begin, let's work on creating our own web component! First, we must create a new folder in Finder to host this project. Then, return to your terminal window and navigate to that folder you just created. You can do this by typing <code>cd &quot;foldername&quot;</code>.
+<strong>Tip</strong>: Make sure you are using the whole file path, typing just the destination folder can run an error.</p>
+<p>Once in your folder, code <code>npm init @open-wc</code> and run the command. This initializes the process for us to create our first web component!
+<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mzogl69k19q38er44yc8.png" alt="open wc"></p>
+<p>From here, we answer the following prompts:</p>
+<ol>
+<li>Scaffold a new project</li>
+<li>Web component</li>
+<li>Press <code>a</code> to select all options, then <code>enter</code> to run</li>
+<li>Deny typescript</li>
+<li>Pick a name for your first project! (I picked &quot;hello-world&quot;)
+<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6udxmnyy3y576p9wcv1t.png" alt="creating wc"></li>
+<li>Select yes to writing file structure to disk</li>
+<li>Install dependencies with npm (this may take some time)</li>
+</ol>
+<p>After receiving the message that we are all set up, simply follow the two commands to run your web server. You should be taken to your first web component!
+<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/t1ou9sje23z39w49smya.png" alt="Image description"></p>
+<hr>
+<h3>Understanding your Web Component</h3>
+<p>Once the web component is created, it is important to understand how it even operates using the <code>src/HelloWorld.js</code> file. In src files, you are able to edit code to enhance components of the websites as I mentioned at the beginning of this post. The src file looks something along the lines of this:</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n4rbe39eixl1eq2ss9up.png" alt="src"></p>
+<p>You can see at the beginning of the code, LitElement is being imported. Lit supports the building of fast and lightweight web components. In order to get more familiar with Lit, I recommend following this <a href="https://lit.dev/tutorial/">tutorial</a>.</p>
+<h2>Wikipedia API Contextualized and Leveraged</h2>
+<p>First, an <strong>application programming interface</strong> (API) is a connection between computers or between computer programs that allow applications to talk to each other. They are very versatile and basically act like a mutual friend between both systems.</p>
+<p>We will be walking through how APIs are visualized, how they work, and how the JSON response is used. The example that we will be contextualizing is Wikipedia's API and how we can leverage it using the Wikipedia query tag.</p>
+<h2>Fetch</h2>
+<p>The main goal for us here is to communicate with Wikipedia's API so that we can render their content on our own projects! We can do this by using the <code>fetch</code> tag. It is &quot;behind the scenes&quot; of the web component. It is what starts the process to retrieve information through APIs. In this case, the <code>fetch</code> tag is used to communicate with Wikipedia to find the respective article so that it can be rendered on the page. In the source code of the Wikipedia query, it shows the <code>fetch</code> tag requesting the address which then leads to the JSON API response.
+<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cqe45udiulbvjcoui1p9.png" alt="Image description"></p>
+<h2>APIs Visualized</h2>
+<p>The Wikipedia query tag communicates with Wikipedia's API service by searching for a Wikipedia article with the title specified. In this image of the Wikipedia query source code, you can see that the code is grabbing the Wikipedia article based on the search that the user will input. <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xw22bqe39ffvkgr95q6w.png" alt="Image description">
+To include the Wikipedia query in your own projects, the following syntax can be implemented. Below, we are specifying that the Wikipedia articles should be searched by the location specified by the user<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zyb3c4o8au7w7dwqjyku.png" alt="Image description">
+<strong>JSON Response and Display</strong>
+The JSON response is the default result of the fetch request because it is easily readable and easy to translate. When the JSON response is received, the web components are displayed on your own projects!</p>
+<p>You can find more information about APIs <a href="https://www.redhat.com/en/topics/api/what-are-application-programming-interfaces">here</a>. For more information about the Wiki API, you can find its documentation <a href="https://en.wikipedia.org/w/api.php">here</a>! For reference I have attached my own GitHub <a href="https://github.com/abbeylyle4/ip-project/blob/master/src/LocationFromIP.js">repository</a>.</p>
